@@ -11,7 +11,7 @@ public class Animation extends Actor
     private int allFrames;
     private String nameSprite;
     private GreenfootImage[] sprites;
-    public Animation(String name, int allFrames){
+    public Animation(String name, int allFrames, int width, int height){
         super();
         this.allFrames = allFrames;
         nameSprite = name;
@@ -19,7 +19,9 @@ public class Animation extends Actor
         currentFrame = 0;
         for(int i = 0; i < allFrames; ++i){
           sprites[i] = new GreenfootImage(name+i+".png");
+          sprites[i].scale(width, height);
         }
+        setImage( sprites[0] );
     }
     
     public void nextFrame(){

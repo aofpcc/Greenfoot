@@ -12,8 +12,8 @@ public class Test extends Animation
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private String name;
-    public Test(){
-      super( "fish", 3 );
+    public Test(int width, int height){
+      super( "fish", 3, width, height );
     }
     
     public void act() 
