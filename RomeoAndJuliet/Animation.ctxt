@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Animation
+comment0.text=\n\ Write\ a\ description\ of\ class\ Animation\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=name\ allFrames
+comment1.target=Animation(java.lang.String,\ int)
+comment2.params=
+comment2.target=void\ nextFrame()
+numComments=3
