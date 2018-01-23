@@ -31,7 +31,7 @@ public class City extends World
         bg = new Floor[w*h];
         for(int i = 0; i < w; ++i){
             for(int j = 0; j < h; ++j){
-                bg[i+j] = new Floor("walkingBrick", bgSize);
+                bg[i+j] = new Floor("Brick/walkingBrick", bgSize);
                 addObject( bg[i+j] , i*bgSize, j*bgSize);
             }
         }
