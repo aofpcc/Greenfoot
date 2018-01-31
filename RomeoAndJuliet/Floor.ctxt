@@ -1,6 +1,12 @@
 #BlueJ class context
 comment0.target=Floor
 comment0.text=\n\ Write\ a\ description\ of\ class\ Floor\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=namePath\ size
-comment1.target=Floor(java.lang.String,\ int)
-numComments=2
+comment1.params=namePath\ size\ x\ y
+comment1.target=Floor(java.lang.String,\ int,\ int,\ int)
+comment2.params=x\ y
+comment2.target=void\ setPosition(int,\ int)
+comment3.params=
+comment3.target=int\ getX()
+comment4.params=
+comment4.target=int\ getY()
+numComments=5

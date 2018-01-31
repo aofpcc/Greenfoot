@@ -16,10 +16,4 @@ public class Test extends Animation
       super( "tree", 1, width, height );
     }
     
-    public void act() 
-    {
-        // Add your action code here.
-        //move(2);
-        nextFrame();
-    }    
 }

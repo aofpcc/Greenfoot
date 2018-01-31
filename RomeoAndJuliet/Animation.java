@@ -5,7 +5,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Animation extends Actor
+public class Animation
 {
     private int currentFrame;
     private int allFrames;
@@ -16,17 +16,20 @@ public class Animation extends Actor
         this.allFrames = allFrames;
         nameSprite = name;
         sprites = new GreenfootImage[allFrames];
-        currentFrame = 0;
+        currentFrame = -1;
         for(int i = 0; i < allFrames; ++i){
           sprites[i] = new GreenfootImage(name+i+".png");
           sprites[i].scale(width, height);
         }
-        setImage( sprites[0] );
     }
     
     public void nextFrame(){
-        setImage( sprites[currentFrame] );
         currentFrame++;
         if(currentFrame == allFrames ) currentFrame = 0;
+    }
+    
+    public GreenfootImage getFrame(){
+      nextFrame();
+      return sprites[currentFrame];
     }
 }

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Vector2
+comment0.text=\n\ Write\ a\ description\ of\ class\ Vector2\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=x\ y
+comment1.target=Vector2(double,\ double)
+comment2.params=
+comment2.target=int\ getX()
+comment3.params=
+comment3.target=int\ getY()
+comment4.params=x\ y
+comment4.target=void\ setXY(double,\ double)
+numComments=5

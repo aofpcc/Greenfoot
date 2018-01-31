@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Characters
+comment0.text=\n\ Write\ a\ description\ of\ class\ Characters\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=scaleAtk\ scaleDef\ scaleEvas\ scaleCrit\ scaleHp\ scaleMp
+comment1.target=void\ setScale(double,\ double,\ double,\ double,\ double,\ double)
+comment2.params=
+comment2.target=void\ resetStat()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=
+comment4.target=void\ restore()
+comment5.params=addedMp
+comment5.target=void\ healMp(double)
+comment6.params=namePlayer
+comment6.target=void\ setPlayerName(java.lang.String)
+numComments=7

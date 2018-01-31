@@ -13,10 +13,24 @@ public class Floor extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     // size should be equals
+    private int x;
+    private int y;
     private GreenfootImage image;
-    public Floor(String namePath, int size){
+    public Floor(String namePath, int size, int x, int y){
         image = new GreenfootImage(namePath+ ".png");
+        this.x = x;
+        this.y = y;
         //image.scale( size, size );
         setImage( image );
+    }
+    public void setPosition(int x, int y){
+      this.x = x;
+      this.y = y;
+    }
+    public int getX(){
+      return x;
+    }
+    public int getY(){
+      return y;
     }
 }
