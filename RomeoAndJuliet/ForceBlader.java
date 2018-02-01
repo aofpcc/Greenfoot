@@ -7,14 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class ForceBlader extends Characters  {
-  private Animation walkingDown;
-  private Animation walkingLeft;
-  private Animation walkingUp;
-  private Animation walkingRight;
-  private Animation standDown;
-  private Animation standLeft;
-  private Animation standUp;
-  private Animation standRight;
+  
   
   public ForceBlader(String name, Vector2 origin, Vector2 size){
     super( "ForceBlader", 10, 3, 2, TYPE.MELEE );
@@ -26,82 +19,25 @@ public class ForceBlader extends Characters  {
     setPosition(origin);
     setSize(size);
     
-    walkingDown = new Animation( "TestCharacters/ForceBlader/walkingDown", 3, getSize().getX(), getSize().getY() );
-    walkingLeft = new Animation( "TestCharacters/ForceBlader/walkingLeft", 3, getSize().getX(), getSize().getY() );
-    walkingUp = new Animation( "TestCharacters/ForceBlader/walkingUp", 3, getSize().getX(), getSize().getY() );
-    walkingRight = new Animation( "TestCharacters/ForceBlader/walkingRight", 3, getSize().getX(), getSize().getY() );
+    setWalkingDown(new Animation( "TestCharacters/ForceBlader/walkingDown", 3, getSize().getX(), getSize().getY() ));
+    setWalkingLeft(new Animation( "TestCharacters/ForceBlader/walkingLeft", 3, getSize().getX(), getSize().getY() ));
+    setWalkingUp(new Animation( "TestCharacters/ForceBlader/walkingUp", 3, getSize().getX(), getSize().getY() ));
+    setWalkingRight( new Animation( "TestCharacters/ForceBlader/walkingRight", 3, getSize().getX(), getSize().getY() ));
     
-    standDown = new Animation( "TestCharacters/ForceBlader/standDown", 1, getSize().getX(), getSize().getY() );
-    standUp = new Animation( "TestCharacters/ForceBlader/standUp", 1, getSize().getX(), getSize().getY() );
-    standLeft = new Animation( "TestCharacters/ForceBlader/standLeft", 1, getSize().getX(), getSize().getY() );
-    standRight = new Animation( "TestCharacters/ForceBlader/standRight", 1, getSize().getX(), getSize().getY() );
+    setStandDown ( new Animation( "TestCharacters/ForceBlader/standDown", 1, getSize().getX(), getSize().getY() ));
+    setStandUp ( new Animation( "TestCharacters/ForceBlader/standUp", 1, getSize().getX(), getSize().getY() ));
+    setStandLeft ( new Animation( "TestCharacters/ForceBlader/standLeft", 1, getSize().getX(), getSize().getY() ));
+    setStandRight ( new Animation( "TestCharacters/ForceBlader/standRight", 1, getSize().getX(), getSize().getY() ));
     
     setSpeed(3);
-    setAnimation(walkingDown);
-    setImage(walkingDown.getFrame());
+    setAnimation(getWalkingDown());
+    setImage(getWalkingDown().getFrame());
   }
-  
-  @Override
-  public void act(){
-    super.act();
-    if(Greenfoot.isKeyDown("Down")){
-        //if( getDirect() != 1 )
-        setDirect(1);
-        setAnimation(walkingDown);
-        if(canMove()){
-            walk();
-            setIsMoving(true);
-        }
-    }
-    else if(Greenfoot.isKeyDown("Left")){
-        //if( getDirect() != 2 )
-        setDirect(2);
-        setAnimation(walkingLeft);
-        if(canMove()){
-            walk();
-            setIsMoving(true);
-        }
-    }
-    
-    else if(Greenfoot.isKeyDown("Up")){
-        //if( getDirect() != 3 )
-        setDirect(3);
-        setAnimation(walkingUp);
-        if(canMove()){
-            walk();
-            setIsMoving(true);
-        }
-    }
-    else if(Greenfoot.isKeyDown("Right")){
-        //if( getDirect() != 4 )
-        setDirect(4);
-        setAnimation(walkingRight);
-        if(canMove()){
-            
-            walk();
-            setIsMoving(true);
-        }
-    }else{
-        setIsMoving(false);
-       switch(getDirect()){
-         case 1: setAnimation(standDown); break;
-         case 2: setAnimation(standLeft); break;
-         case 3: setAnimation(standUp); break;
-         case 4: setAnimation(standRight); break;
-       }
-    }
-  }
-  
-  public boolean canMove(){
-    if( getDirect() == 1 ||  getDirect() == 3 )
-        return nextStep() - 10 > 0 && nextStep() < 650;
-    return nextStep() - 10 > 0 && nextStep() < 1150;
-  }
+ 
   
   @Override
   public void walk(){
     super.walk();
-    
   }
   
 }

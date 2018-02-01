@@ -22,6 +22,8 @@ public class City extends World
     private Vector2 positionBG;
     private boolean isBounded;
     
+    private Controller controller;
+    
     public City()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -53,6 +55,9 @@ public class City extends World
         }
         addObject(player, player.getPosition().getX(), player.getPosition().getY());
         Greenfoot.setSpeed(48);
+        
+        controller = new Controller(player);
+        addObject(controller, -100, -100);
     }
     
     public void act(){
