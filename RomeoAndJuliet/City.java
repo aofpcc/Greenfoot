@@ -25,11 +25,13 @@ public class City extends World
     public City()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // width , height
         super(1200, 700, 1, false);
         positionBG = new Vector2(600, 350);
         
         width = getWidth();
         height = getHeight();
+        //System.out.println(width);
         bgSize = 32;
         int w, h;
         h = height/bgSize + 5;
@@ -45,7 +47,7 @@ public class City extends World
         // set floor 
         for(int i = 0; i < w; ++i){
             for(int j = 0; j < h; ++j){
-                bg[i+j] = new Floor("Brick/walkingBrick", bgSize, i*bgSize, j*bgSize );
+                bg[i+j] = new Floor("walked/brick/00", bgSize, i*bgSize, j*bgSize );
                 addObject( bg[i+j] , bg[i+j].getX(), bg[i+j].getY() );
             }
         }
@@ -72,24 +74,27 @@ public class City extends World
         
         int px = player.getPosition().getX();
         int py = player.getPosition().getY();
-        
         int speed = player.getSpeed();
+        
+        //System.out.println( "x : " + x + ",y : " +y );
+        //System.out.println( "Speed : " + speed + " , Height: " + height + ",Width : " + width ); 
+        
         boolean check = false;
         switch( d ){
             case 1:
-                if( y-speed >= 350 && py >= 350  )
+                if( y >= height/2 && py-speed >= height/2  )
                     check = true;
                 break;
             case 2:
-                if( x+speed <= 600 && px <= 600  )
+                if( x <= width/2 && px+speed <= width/2  )
                     check = true;
                 break;
             case 3:
-                if( y+speed <= 370 &&  py <= 370 )
+                if( y <= height/2 &&  py+speed <= height/2 )
                     check = true;
                 break;
             case 4:
-                if( x-speed >= 470 && px >= 600 )
+                if( x >= width/2 && px-speed >= width/2)
                     check = true;
                 break;
         }  

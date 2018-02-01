@@ -21,4 +21,8 @@ public class Vector2{
     this.x = x;
     this.y = y;
   }
+  public void setVector2(Vector2 v){
+    this.x = v.getX();
+    this.y = v.getY();
+  }
 }

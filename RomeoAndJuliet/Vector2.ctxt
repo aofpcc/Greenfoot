@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=int\ getY()
 comment4.params=x\ y
 comment4.target=void\ setXY(double,\ double)
-numComments=5
+comment5.params=v
+comment5.target=void\ setVector2(Vector2)
+numComments=6
