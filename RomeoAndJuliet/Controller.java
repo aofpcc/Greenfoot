@@ -17,7 +17,16 @@ public class Controller extends Actor
     this.player = player;  
   }
   public void act(){
-    if(Greenfoot.isKeyDown("Down")){
+    if( player.getSkillFrame() > 0 ){
+        
+    }
+    else if(Greenfoot.isKeyDown("Space")){
+        //System.out.println("Attack");
+        if( player.getSkillFrame() == 0){
+            player.attack();
+        }
+    }
+    else if(Greenfoot.isKeyDown("Down")){
         //if( getDirect() != 1 )
         player.setDirect(1);
         player.setAnimation(player.getWalkingDown());
@@ -53,7 +62,8 @@ public class Controller extends Actor
             player.walk();
             player.setIsMoving(true);
         }
-    }else{
+    }
+    else{
         player.setIsMoving(false);
        switch(player.getDirect()){
          case 1: player.setAnimation(player.getStandDown()); break;

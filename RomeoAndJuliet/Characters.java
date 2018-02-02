@@ -22,6 +22,9 @@ public abstract class Characters extends BasicStatus {
   private Animation standLeft;
   private Animation standUp;
   private Animation standRight;
+  private Animation attackAnimation;
+  
+  private Skill[] skills;
   
   public Characters(String name, int strength, int agility, int intelligent,TYPE typeObj){
     super(name, strength, agility, intelligent, typeObj);
@@ -103,6 +106,9 @@ public abstract class Characters extends BasicStatus {
   public void setStandRight(Animation standRight){
     this.standRight = standRight;
   }
+  public void setAttackAnimation(Animation anim){
+    this.attackAnimation = anim;
+  }
   
   public Animation getStandDown(){
     return standDown;
@@ -115,6 +121,9 @@ public abstract class Characters extends BasicStatus {
   }
   public Animation getStandRight(){
     return standRight;
+  }
+  public Animation getAttackAnimation(){
+    return attackAnimation;  
   }
   
 }

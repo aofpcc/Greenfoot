@@ -42,7 +42,7 @@ public class City extends World
         
         
         // Add Object
-        player = new ForceBlader("Aof", new Vector2(600, 350), new Vector2( 75, 75));
+        player = new Wizard("Aof", new Vector2(600, 350), new Vector2( 75, 80));
         int x = player.getPosition().getX();
         int y = player.getPosition().getY();
 

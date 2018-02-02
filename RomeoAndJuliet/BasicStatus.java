@@ -10,6 +10,11 @@ public abstract class BasicStatus extends Actor{
   private String name;
   private int totalPoint = 0;
   
+  //Skill
+  private boolean isSkilling = false;
+  private int skillFrame;
+  private Skill attack;
+  
   // movement
   private int direction = 1; // 1 down 2 left 3 up 4 right
   private Vector2 position;
@@ -197,9 +202,13 @@ public abstract class BasicStatus extends Actor{
   public Animation getAnimation(){
     return currentAnim;  
   }
-  
+  // Action
   public void act(){
-    if( animDelay++ >= speed ){
+    
+    if( animDelay++ >= speed -1 ){
+        if( skillFrame > 0 ){
+            skillFrame--;
+        }
         setImage( currentAnim.getFrame() );
         animDelay = 0;
     }
@@ -243,4 +252,33 @@ public abstract class BasicStatus extends Actor{
     return 0;
   }
   
+  
+  public void setIsSkilling( boolean b ){
+    this.isSkilling = b;
+  }
+  public boolean isSkilling(){
+    return isSkilling;
+  }
+  
+  public void setSkillFrame(int sf){
+    this.skillFrame = sf;
+  }
+  public int getSkillFrame(){
+    return skillFrame;  
+  }
+  
+  public void setAttack(Skill sk){
+    this.attack = sk;
+  }
+  public Skill getAttack(){
+    return attack;
+  }
+  
+  public void attack(){
+    if( skillFrame == 0 ){
+        attack.action();
+        skillFrame = attack.getSkillFrame();
+        currentAnim = attack.getCurrentAnimation();
+    }
+  }
 }

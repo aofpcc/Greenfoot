@@ -33,11 +33,6 @@ public class ForceBlader extends Characters  {
     setAnimation(getWalkingDown());
     setImage(getWalkingDown().getFrame());
   }
- 
-  
-  @Override
-  public void walk(){
-    super.walk();
-  }
+
   
 }

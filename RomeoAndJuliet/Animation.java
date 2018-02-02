@@ -12,7 +12,6 @@ public class Animation
     private String nameSprite;
     private GreenfootImage[] sprites;
     public Animation(String name, int allFrames, int width, int height){
-        super();
         this.allFrames = allFrames;
         nameSprite = name;
         sprites = new GreenfootImage[allFrames];
@@ -31,5 +30,9 @@ public class Animation
     public GreenfootImage getFrame(){
       nextFrame();
       return sprites[currentFrame];
+    }
+    
+    public int getAllFrames(){
+      return allFrames;
     }
 }
