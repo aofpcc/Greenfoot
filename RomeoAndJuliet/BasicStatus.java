@@ -10,6 +10,9 @@ public abstract class BasicStatus extends Actor{
   private String name;
   private int totalPoint = 0;
   
+  // UI
+  private HealthBar hpBar;
+  
   //Skill
   private boolean isSkilling = false;
   private int skillFrame;
@@ -28,6 +31,11 @@ public abstract class BasicStatus extends Actor{
   private int strength;
   private int agility;
   private int intelligent;
+  
+  // Dead
+  protected Animation die;
+  private boolean isDead;
+  private int dieTime = 0;
   
   public enum TYPE{
     MELEE,
@@ -58,6 +66,7 @@ public abstract class BasicStatus extends Actor{
     this.intelligent = intelligent;
     this.typeObj     = typeObj;
     this.name        = name;
+    this.position    = position;
   }
   
   public BasicStatus( String name, double atk, double def, double evas, double crit, double hp){
@@ -123,6 +132,10 @@ public abstract class BasicStatus extends Actor{
   }
   public double getCurrentHp(){
     return currentHp;
+  }
+  // get max hp
+  public double getMaxHp(){
+    return hp;
   }
   // set  get point
   public void setTotalPoint(int point){
@@ -202,15 +215,31 @@ public abstract class BasicStatus extends Actor{
   public Animation getAnimation(){
     return currentAnim;  
   }
-  // Action
+  // Action each 
   public void act(){
     
-    if( animDelay++ >= speed -1 ){
+    if( isDead && skillFrame == 0 ){
+         dieTime++;
+         if( dieTime >= 20 ){
+            getWorld().removeObject(this);
+         }
+    }
+    else if( animDelay++ >= speed -1 ){
         if( skillFrame > 0 ){
             skillFrame--;
         }
         setImage( currentAnim.getFrame() );
+        
         animDelay = 0;
+        
+        //Test
+        getDamage( 0.1 );
+    }
+    if( currentHp > 0 ){
+        hpBar.action();
+    }else if( currentHp <= 0 && !isDead ){
+        getWorld().removeObject(hpBar);
+        die();
     }
   }
   
@@ -274,11 +303,31 @@ public abstract class BasicStatus extends Actor{
     return attack;
   }
   
+  public void setHpBar(HealthBar hpBar){
+    this.hpBar = hpBar;
+  }
+  public HealthBar getHpBar(){
+    return hpBar;  
+  }
+  
   public void attack(){
     if( skillFrame == 0 ){
         attack.action();
         skillFrame = attack.getSkillFrame();
         currentAnim = attack.getCurrentAnimation();
     }
+  }
+  
+  public void getDamage(double dmg){
+    if( !isDead )this.currentHp -= dmg;
+  }
+  
+  public void die(){
+    skillFrame = die.getAllFrames();  // beware s
+    currentAnim = die;
+    isDead = true;
+  }
+  public boolean isDead(){
+    return isDead;  
   }
 }

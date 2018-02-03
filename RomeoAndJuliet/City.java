@@ -43,9 +43,10 @@ public class City extends World
         
         // Add Object
         player = new Wizard("Aof", new Vector2(600, 350), new Vector2( 75, 80));
+        player.setHpBar( new HealthBar(player) );
         int x = player.getPosition().getX();
         int y = player.getPosition().getY();
-
+        
         // set floor 
         for(int i = 0; i < w; ++i){
             for(int j = 0; j < h; ++j){
@@ -54,6 +55,7 @@ public class City extends World
             }
         }
         addObject(player, player.getPosition().getX(), player.getPosition().getY());
+        addObject( player.getHpBar(), player.getPosition().getX(), player.getPosition().getY()-(player.getSize().getY()/2) );
         Greenfoot.setSpeed(48);
         
         controller = new Controller(player);
@@ -61,8 +63,7 @@ public class City extends World
     }
     
     public void act(){
-      if(player.isMoving()){
-        
+      if( player != null && player.isMoving()){
         if( checkBounded())
           setWorldRelate();
       }

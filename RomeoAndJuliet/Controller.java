@@ -17,10 +17,10 @@ public class Controller extends Actor
     this.player = player;  
   }
   public void act(){
-    if( player.getSkillFrame() > 0 ){
+    if( player.getSkillFrame() > 0 || player.isDead()){
         
     }
-    else if(Greenfoot.isKeyDown("Space")){
+    else if( player.getAttack() != null && Greenfoot.isKeyDown("Space") ){
         //System.out.println("Attack");
         if( player.getSkillFrame() == 0){
             player.attack();

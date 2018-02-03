@@ -10,14 +10,14 @@ public class ForceBlader extends Characters  {
   
   
   public ForceBlader(String name, Vector2 origin, Vector2 size){
-    super( "ForceBlader", 10, 3, 2, TYPE.MELEE );
+    super( "ForceBlader", 10, 3, 2, TYPE.MELEE);
     //double scaleAtk, double scaleDef, double scaleEvas, double scaleCrit, double scaleHp, double scaleMp
     this.setPlayerName(name);
     setScale( 2,1,1,1,1,1 );
     resetStat();
     restore();
-    setPosition(origin);
     setSize(size);
+    setPosition(origin);
     
     setWalkingDown(new Animation( "TestCharacters/ForceBlader/walkingDown", 3, getSize().getX(), getSize().getY() ));
     setWalkingLeft(new Animation( "TestCharacters/ForceBlader/walkingLeft", 3, getSize().getX(), getSize().getY() ));
@@ -33,6 +33,5 @@ public class ForceBlader extends Characters  {
     setAnimation(getWalkingDown());
     setImage(getWalkingDown().getFrame());
   }
-
   
 }
