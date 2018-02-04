@@ -14,7 +14,7 @@ public class Wizard extends Characters {
     super( "Wizard", 5, 1, 9, TYPE.MAGIC );
     this.setPlayerName(name);
     //double scaleAtk, double scaleDef, double scaleEvas, double scaleCrit, double scaleHp, double scaleMp
-    this.setScale( 1,1,1,1,1,1 );
+    this.setScale( 10,1,1,1,1,1 );
     resetStat();
     restore();
     setSize(size);
