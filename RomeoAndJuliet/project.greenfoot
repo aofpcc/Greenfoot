@@ -1,8 +1,8 @@
 #Greenfoot properties
-#Sat Feb 03 17:23:44 ICT 2018
+#Sun Feb 04 13:21:02 ICT 2018
 dependency32.to=Animation
 target2.width=100
-editor.fx.0.height=722
+editor.fx.0.height=0
 target8.name=Skill
 target11.y=0
 target11.x=0
@@ -12,7 +12,7 @@ class.City.superclass=greenfoot.World
 dependency22.type=UsesDependency
 target7.showInterface=false
 target1.type=ClassTarget
-mainWindow.height=813
+mainWindow.height=815
 target6.typeParameters=
 target1.height=50
 dependency9.to=Animation
@@ -105,8 +105,8 @@ dependency21.from=Skill
 target11.type=ClassTarget
 version=3.0.0
 dependency31.from=Wizard
-editor.fx.0.y=94
-editor.fx.0.x=317
+editor.fx.0.y=0
+editor.fx.0.x=0
 dependency15.from=City
 target15.height=50
 dependency6.to=HealthBar
@@ -143,7 +143,7 @@ dependency23.to=Animation
 target12.y=0
 target12.x=0
 dependency10.type=UsesDependency
-editor.fx.0.width=840
+editor.fx.0.width=0
 target11.showInterface=false
 target10.y=0
 dependency20.type=UsesDependency
