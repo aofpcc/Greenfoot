@@ -28,6 +28,8 @@ public class InfoButton extends GameUI
             time--;
             if(time == 0) isNormal = true;
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
         else if( Greenfoot.getMouseInfo() == null ){}
         else if(Greenfoot.getMouseInfo().getActor() != null && Greenfoot.getMouseInfo().getActor() == this)
         {
@@ -36,10 +38,25 @@ public class InfoButton extends GameUI
                 isNormal = false;
                 time = 10;
             }
+            
+            //Show info
+            
+=======
+=======
+>>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+        else if( Greenfoot.getMouseInfo()!=null &&Greenfoot.mousePressed(this) ){
+            setImage(animClick);
+            isNormal = false;
+            time = 10;
+<<<<<<< HEAD
+>>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+=======
+>>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
         }
         else if(isNormal)
         {
             setImage(animNormal);
         }
+        
     }    
 }

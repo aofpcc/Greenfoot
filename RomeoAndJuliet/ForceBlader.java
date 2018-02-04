@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ForceBlader extends Characters  {
   
-  
   public ForceBlader(String name, Vector2 origin, Vector2 size){
     super( "ForceBlader", 10, 3, 2, TYPE.MELEE);
     //double scaleAtk, double scaleDef, double scaleEvas, double scaleCrit, double scaleHp, double scaleMp

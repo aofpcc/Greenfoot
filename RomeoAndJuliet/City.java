@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List;
+import java.util.*;
+import javax.swing.*;
 
 /**
  * Write a description of class MyWorld here.
@@ -44,6 +45,7 @@ public class City extends World
         // Add Object
         player = new Wizard("Aof", new Vector2(600, 350), new Vector2( 75, 80));
         player.setHpBar( new HealthBar(player) );
+       
         int x = player.getPosition().getX();
         int y = player.getPosition().getY();
         
@@ -63,6 +65,16 @@ public class City extends World
         
         //UI 
         addObject(new InfoButton(), width-30, 30); 
+        
+        for(int i = 0; i < 10; ++i){
+            Skeleton test = new Skeleton( new Vector2(350 + i*30, 350 + i*30), new Vector2( 75, 80 ) );
+            test.setHpBar( new HealthBar(test) );
+            addObject(test, test.getPosition().getX(), test.getPosition().getY());
+            addObject( test.getHpBar(), test.getPosition().getX(), test.getPosition().getY()-(test.getSize().getY()/2) );
+        }
+        
+        setPaintOrder( GameUI.class, HealthBar.class );
+        
     }
     
     public void act(){
@@ -70,6 +82,25 @@ public class City extends World
         if( checkBounded())
           setWorldRelate();
       }
+      
+      // sort by 
+      List<Monster> monsters = getObjects( Monster.class );
+      for( Monster m : monsters ){
+        if( m.getPosition().getY() > player.getPosition().getY() ){
+          removeObject(m);
+          addObject(m, m.getPosition().getX(), m.getPosition().getY());
+        }else{
+          removeObject( player );
+          addObject(player , player.getPosition().getX(), player.getPosition().getY());
+        }
+      }
+      
+      /*
+      int mb = 1024*1024;
+      Runtime runtime = Runtime.getRuntime();
+      long usedMem = ( runtime.totalMemory()-runtime.freeMemory())/mb;
+      System.out.println(usedMem + " : " + (runtime.totalMemory()/mb));
+      */
     }
     
     public boolean isBounded(){
@@ -131,26 +162,51 @@ public class City extends World
                 positionBG.setXY( positionBG.getX()-speed, positionBG.getY());
                 break;
         }  
-      
+      int changeX = 0, changeY =0;
       for( Floor f : floors ){
         switch( d ){
             case 1:
-                f.setPosition( f.getX() , f.getY() - speed);
-                f.setLocation( f.getX() , f.getY() );
+                changeX = 0;
+                changeY = - speed;
                 break;
             case 2:
-                f.setPosition( f.getX() + speed, f.getY() );
-                f.setLocation( f.getX() , f.getY() );
+                changeX = speed;
+                changeY = 0;
                 break;
             case 3:
-                f.setPosition( f.getX() , f.getY() + speed);
-                f.setLocation( f.getX() , f.getY() );
+                changeX = 0;
+                changeY = speed;
                 break;
             case 4:
-                f.setPosition( f.getX() - speed, f.getY() );
-                f.setLocation( f.getX() , f.getY() );
+                changeX = - speed;
+                changeY = 0;
                 break;
-        }   
+        }  
+        f.setPosition( f.getX() + changeX , f.getY() + changeY);
+        f.setLocation( f.getX() , f.getY() );
+      }
+      List<Monster> monsters = getObjects(Monster.class);
+      for( Monster m : monsters ){
+        switch( d ){
+            case 1:
+                changeX = 0;
+                changeY = - speed;
+                break;
+            case 2:
+                changeX = speed;
+                changeY = 0;
+                break;
+            case 3:
+                changeX = 0;
+                changeY = speed;
+                break;
+            case 4:
+                changeX = - speed;
+                changeY = 0;
+                break;
+        }
+        m.setPosition( new Vector2( m.getPosition().getX() + changeX , m.getPosition().getY() + changeY) );
+        m.setLocation( m.getPosition().getX(), m.getPosition().getY() );
       }
     }
     

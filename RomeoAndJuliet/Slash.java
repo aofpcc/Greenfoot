@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * Write a description of class Slash here.
  * 
@@ -11,7 +12,8 @@ public class Slash extends Skill
     private Animation skillUp;
     private Animation skillRight;
     
-    
+    private int changeX, changeY;
+    private int range;
     
     public Slash(Characters owner, Vector2 position){
       super( owner, position);
@@ -21,17 +23,34 @@ public class Slash extends Skill
       skillRight = new Animation("TestCharacters/Wizard/Skills/Slash/skillRight" , 6, owner.getSize().getX(), owner.getSize().getY() );
      
       setSkillFrame(6);
+      range = 10;
     }
     
     @Override
     public void action(){
       switch( getOwner().getDirect() ){
-        case 1: setCurrentAnimation( skillDown ); break;
-        case 2: setCurrentAnimation( skillLeft ); break;
-        case 3: setCurrentAnimation( skillUp ); break;
-        case 4: setCurrentAnimation( skillRight ); break;
+        case 1: setCurrentAnimation( skillDown ); 
+                changeX = 0; changeY = range;
+                break;
+        case 2: setCurrentAnimation( skillLeft ); 
+                changeX = -range; changeY = 0;
+                break;
+        case 3: setCurrentAnimation( skillUp ); 
+                changeX = 0; changeY = -range;
+                break;
+        case 4: setCurrentAnimation( skillRight ); 
+                changeX = range; changeY = 0;
+                break;
       }
-      
+      sendDamage();
+    }
+    
+    public void sendDamage(){
+      BasicStatus owner = getOwner();
+      List<Monster> monsters = owner.getWorld().getObjectsAt( owner.getPosition().getX() + changeX, owner.getPosition().getY()+changeY, Monster.class );
+      for( Monster m : monsters ){
+        m.getDamage( owner.getAtk() );
+      }
     }
     
 }
