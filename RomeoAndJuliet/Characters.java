@@ -28,6 +28,7 @@ public abstract class Characters extends BasicStatus {
   
   public Characters(String name, int strength, int agility, int intelligent,TYPE typeObj){
     super(name, strength, agility, intelligent, typeObj);
+    maxDelay = 3;
   }
   
   

@@ -28,14 +28,10 @@ public class InfoButton extends GameUI
             time--;
             if(time == 0) isNormal = true;
         }
-        else if( Greenfoot.getMouseInfo() == null ){}
-        else if(Greenfoot.getMouseInfo().getActor() != null && Greenfoot.getMouseInfo().getActor() == this)
-        {
-            if( Greenfoot.getMouseInfo().getClickCount() %2 == 1 ){
-                setImage(animClick);
-                isNormal = false;
-                time = 10;
-            }
+        else if( Greenfoot.getMouseInfo()!=null &&Greenfoot.mousePressed(this) ){
+            setImage(animClick);
+            isNormal = false;
+            time = 10;
         }
         else if(isNormal)
         {

@@ -82,10 +82,10 @@ public class Controller extends Actor
     //Mouse on the button
     
     }
-    public boolean canMove(){
-        if( player.getDirect() == 1 ||  player.getDirect() == 3 )
-            return player.nextStep() - 10 > 0 && player.nextStep() < 650;
-        return player.nextStep() - 10 > 0 && player.nextStep() < 1150;
-    }
+  public boolean canMove(){
+      if( player.getDirect() == 1 ||  player.getDirect() == 3 )
+          return player.nextStep() - 10 > 0 && player.nextStep() < 650;
+      return player.nextStep() - 10 > 0 && player.nextStep() < 1150;
+  }
     
 } 
