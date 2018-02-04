@@ -1,7 +1,7 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=7d58758c5d1fc698ffcf342acf3b2eb454a17fa3
+>>>>>>>=4363ca291e3bb105fc314e686586096cace9c96a
 class.Animation.superclass=
 class.Background.superclass=greenfoot.Actor
 class.BasicStatus.superclass=greenfoot.Actor
@@ -14,63 +14,18 @@ class.ForceGunner.superclass=Characters
 class.GameUI.superclass=greenfoot.Actor
 class.HealthBar.superclass=GameUI
 class.InfoButton.superclass=GameUI
-<<<<<<< HEAD
-<<<<<<< HEAD
-class.Skill.superclass=
-class.Slash.superclass=Skill
-class.UserInfo.superclass=GameUI
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 class.Monster.superclass=BasicStatus
 class.Skeleton.superclass=Monster
 class.Skill.superclass=
 class.Slash.superclass=Skill
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+class.UserInfo.superclass=GameUI
 class.Vector2.superclass=
 class.Wizard.superclass=Characters
 dependency1.from=Background
 dependency1.to=Floor
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
 dependency10.from=HealthBar
 dependency10.to=Animation
-dependency10.type=UsesDependency
-dependency11.from=UserInfo
-dependency11.to=BasicStatus
-dependency11.type=UsesDependency
-dependency12.from=City
-dependency12.to=Floor
-dependency12.type=UsesDependency
-dependency13.from=City
-dependency13.to=ForceBlader
-dependency13.type=UsesDependency
-dependency14.from=City
-dependency14.to=Vector2
-dependency14.type=UsesDependency
-dependency15.from=City
-dependency15.to=Characters
-dependency15.type=UsesDependency
-dependency16.from=City
-dependency16.to=Controller
-dependency16.type=UsesDependency
-dependency17.from=City
-dependency17.to=Wizard
-dependency17.type=UsesDependency
-dependency18.from=City
-dependency18.to=HealthBar
-dependency18.type=UsesDependency
-dependency19.from=City
-dependency19.to=InfoButton
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-dependency10.from=Characters
-dependency10.to=Vector2
 dependency10.type=UsesDependency
 dependency11.from=City
 dependency11.to=Floor
@@ -98,203 +53,112 @@ dependency18.to=InfoButton
 dependency18.type=UsesDependency
 dependency19.from=City
 dependency19.to=Skeleton
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 dependency19.type=UsesDependency
 dependency2.from=Background
 dependency2.to=ForceBlader
 dependency2.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
-dependency20.from=Controller
-dependency20.to=Characters
-dependency20.type=UsesDependency
-dependency21.from=Skill
-dependency21.to=Vector2
-dependency21.type=UsesDependency
-dependency22.from=Skill
-dependency22.to=Characters
-dependency22.type=UsesDependency
-dependency23.from=Skill
-dependency23.to=Animation
-dependency23.type=UsesDependency
-dependency24.from=GameUI
-dependency24.to=Vector2
-dependency24.type=UsesDependency
-dependency25.from=GameUI
-dependency25.to=Animation
-dependency25.type=UsesDependency
-dependency26.from=GameUI
-dependency26.to=HealthBar
-dependency26.type=UsesDependency
-dependency27.from=ForceGunner
-dependency27.to=Vector2
-dependency27.type=UsesDependency
-dependency28.from=ForceGunner
-dependency28.to=Animation
-dependency28.type=UsesDependency
-dependency29.from=ForceGunner
-dependency29.to=HealthBar
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 dependency20.from=City
 dependency20.to=Monster
 dependency20.type=UsesDependency
 dependency21.from=City
 dependency21.to=BasicStatus
 dependency21.type=UsesDependency
-dependency22.from=Controller
-dependency22.to=Characters
+dependency22.from=City
+dependency22.to=GameUI
 dependency22.type=UsesDependency
-dependency23.from=Skill
-dependency23.to=Vector2
+dependency23.from=Controller
+dependency23.to=Characters
 dependency23.type=UsesDependency
 dependency24.from=Skill
-dependency24.to=Characters
+dependency24.to=Vector2
 dependency24.type=UsesDependency
 dependency25.from=Skill
-dependency25.to=Animation
+dependency25.to=Characters
 dependency25.type=UsesDependency
-dependency26.from=GameUI
-dependency26.to=Vector2
+dependency26.from=Skill
+dependency26.to=Animation
 dependency26.type=UsesDependency
 dependency27.from=GameUI
-dependency27.to=Animation
+dependency27.to=Vector2
 dependency27.type=UsesDependency
 dependency28.from=GameUI
-dependency28.to=HealthBar
+dependency28.to=Animation
 dependency28.type=UsesDependency
-dependency29.from=ForceGunner
-dependency29.to=Vector2
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+dependency29.from=GameUI
+dependency29.to=HealthBar
 dependency29.type=UsesDependency
 dependency3.from=Background
 dependency3.to=Vector2
 dependency3.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
-dependency30.from=Slash
+dependency30.from=ForceGunner
 dependency30.to=Vector2
 dependency30.type=UsesDependency
-dependency31.from=Slash
+dependency31.from=ForceGunner
 dependency31.to=Animation
 dependency31.type=UsesDependency
-dependency32.from=Slash
-dependency32.to=Characters
-dependency32.type=UsesDependency
-dependency33.from=Wizard
-dependency33.to=Vector2
-dependency33.type=UsesDependency
-dependency34.from=Wizard
-dependency34.to=Animation
-dependency34.type=UsesDependency
-dependency35.from=Wizard
-dependency35.to=Slash
-dependency35.type=UsesDependency
-dependency36.from=Wizard
-dependency36.to=HealthBar
-dependency36.type=UsesDependency
-dependency37.from=BasicStatus
-dependency37.to=Vector2
-dependency37.type=UsesDependency
-dependency38.from=BasicStatus
-dependency38.to=Animation
-dependency38.type=UsesDependency
-dependency39.from=BasicStatus
-dependency39.to=Skill
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-dependency30.from=ForceGunner
-dependency30.to=Animation
-dependency30.type=UsesDependency
-dependency31.from=ForceGunner
-dependency31.to=HealthBar
-dependency31.type=UsesDependency
-dependency32.from=Monster
-dependency32.to=Vector2
+dependency32.from=ForceGunner
+dependency32.to=HealthBar
 dependency32.type=UsesDependency
 dependency33.from=Monster
-dependency33.to=Animation
+dependency33.to=Vector2
 dependency33.type=UsesDependency
-dependency34.from=Slash
-dependency34.to=Vector2
+dependency34.from=Monster
+dependency34.to=Animation
 dependency34.type=UsesDependency
 dependency35.from=Slash
-dependency35.to=Animation
+dependency35.to=Vector2
 dependency35.type=UsesDependency
 dependency36.from=Slash
-dependency36.to=Characters
+dependency36.to=Animation
 dependency36.type=UsesDependency
 dependency37.from=Slash
-dependency37.to=Monster
+dependency37.to=Characters
 dependency37.type=UsesDependency
 dependency38.from=Slash
-dependency38.to=BasicStatus
+dependency38.to=Monster
 dependency38.type=UsesDependency
-dependency39.from=Skeleton
-dependency39.to=Vector2
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+dependency39.from=Slash
+dependency39.to=BasicStatus
 dependency39.type=UsesDependency
 dependency4.from=ForceBlader
 dependency4.to=Vector2
 dependency4.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
-dependency40.from=BasicStatus
-dependency40.to=HealthBar
-dependency40.type=UsesDependency
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 dependency40.from=Skeleton
-dependency40.to=Animation
+dependency40.to=Vector2
 dependency40.type=UsesDependency
-dependency41.from=Wizard
-dependency41.to=Vector2
+dependency41.from=Skeleton
+dependency41.to=Animation
 dependency41.type=UsesDependency
 dependency42.from=Wizard
-dependency42.to=Animation
+dependency42.to=Vector2
 dependency42.type=UsesDependency
 dependency43.from=Wizard
-dependency43.to=Slash
+dependency43.to=Animation
 dependency43.type=UsesDependency
 dependency44.from=Wizard
-dependency44.to=HealthBar
+dependency44.to=Slash
 dependency44.type=UsesDependency
-dependency45.from=BasicStatus
-dependency45.to=Vector2
+dependency45.from=Wizard
+dependency45.to=HealthBar
 dependency45.type=UsesDependency
 dependency46.from=BasicStatus
-dependency46.to=Animation
+dependency46.to=Vector2
 dependency46.type=UsesDependency
 dependency47.from=BasicStatus
-dependency47.to=Skill
+dependency47.to=Animation
 dependency47.type=UsesDependency
 dependency48.from=BasicStatus
-dependency48.to=HealthBar
+dependency48.to=Skill
 dependency48.type=UsesDependency
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+dependency49.from=BasicStatus
+dependency49.to=HealthBar
+dependency49.type=UsesDependency
 dependency5.from=ForceBlader
 dependency5.to=Animation
 dependency5.type=UsesDependency
 dependency6.from=ForceBlader
 dependency6.to=HealthBar
 dependency6.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
 dependency7.from=Characters
 dependency7.to=Animation
 dependency7.type=UsesDependency
@@ -304,42 +168,16 @@ dependency8.type=UsesDependency
 dependency9.from=HealthBar
 dependency9.to=BasicStatus
 dependency9.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=552
-editor.fx.0.y=100
-mainWindow.height=1056
-mainWindow.width=1936
-mainWindow.x=-8
-mainWindow.y=-8
-package.numDependencies=40
-package.numTargets=17
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-dependency7.from=HealthBar
-dependency7.to=BasicStatus
-dependency7.type=UsesDependency
-dependency8.from=HealthBar
-dependency8.to=Animation
-dependency8.type=UsesDependency
-dependency9.from=Characters
-dependency9.to=Animation
-dependency9.type=UsesDependency
 editor.fx.0.height=722
 editor.fx.0.width=936
 editor.fx.0.x=226
 editor.fx.0.y=47
-mainWindow.height=813
-mainWindow.width=1440
-mainWindow.x=0
-mainWindow.y=24
-package.numDependencies=48
-package.numTargets=18
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+mainWindow.height=1056
+mainWindow.width=1936
+mainWindow.x=-8
+mainWindow.y=-8
+package.numDependencies=49
+package.numTargets=19
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -357,15 +195,7 @@ target1.width=80
 target1.x=0
 target1.y=0
 target10.height=50
-<<<<<<< HEAD
-<<<<<<< HEAD
 target10.name=Skill
-=======
-target10.name=GameUI
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
-target10.name=GameUI
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target10.naviview.expanded=false
 target10.showInterface=false
 target10.type=ClassTarget
@@ -374,15 +204,7 @@ target10.width=80
 target10.x=0
 target10.y=0
 target11.height=50
-<<<<<<< HEAD
-<<<<<<< HEAD
 target11.name=GameUI
-=======
-target11.name=Vector2
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
-target11.name=Vector2
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target11.naviview.expanded=false
 target11.showInterface=false
 target11.type=ClassTarget
@@ -391,107 +213,43 @@ target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
-<<<<<<< HEAD
-<<<<<<< HEAD
 target12.name=Vector2
-=======
-target12.name=ForceGunner
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
-target12.name=ForceGunner
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target12.naviview.expanded=false
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
-<<<<<<< HEAD
-<<<<<<< HEAD
 target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
 target13.name=ForceGunner
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-target12.width=100
-target12.x=0
-target12.y=0
-target13.height=50
-target13.name=Monster
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target13.naviview.expanded=false
 target13.showInterface=false
 target13.type=ClassTarget
 target13.typeParameters=
-<<<<<<< HEAD
-<<<<<<< HEAD
 target13.width=100
 target13.x=0
 target13.y=0
 target14.height=50
-target14.name=Animation
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-target13.width=80
-target13.x=0
-target13.y=0
-target14.height=50
-target14.name=Slash
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+target14.name=Monster
 target14.naviview.expanded=false
 target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
-<<<<<<< HEAD
-<<<<<<< HEAD
-target14.width=90
-target14.x=0
-target14.y=0
-target15.height=50
-target15.name=Slash
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
 target15.name=Animation
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target15.naviview.expanded=false
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
-<<<<<<< HEAD
-<<<<<<< HEAD
-target15.width=80
-target15.x=0
-target15.y=0
-target16.height=50
-target16.name=Wizard
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target15.width=90
 target15.x=0
 target15.y=0
 target16.height=50
-target16.name=Skeleton
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+target16.name=Slash
 target16.naviview.expanded=false
 target16.showInterface=false
 target16.type=ClassTarget
@@ -500,20 +258,7 @@ target16.width=80
 target16.x=0
 target16.y=0
 target17.height=50
-<<<<<<< HEAD
-<<<<<<< HEAD
-target17.name=BasicStatus
-target17.naviview.expanded=false
-target17.showInterface=false
-target17.type=AbstractTarget
-target17.typeParameters=
-target17.width=100
-target17.x=0
-target17.y=0
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-target17.name=Wizard
+target17.name=Skeleton
 target17.naviview.expanded=false
 target17.showInterface=false
 target17.type=ClassTarget
@@ -522,18 +267,23 @@ target17.width=80
 target17.x=0
 target17.y=0
 target18.height=50
-target18.name=BasicStatus
+target18.name=Wizard
 target18.naviview.expanded=false
 target18.showInterface=false
-target18.type=AbstractTarget
+target18.type=ClassTarget
 target18.typeParameters=
-target18.width=100
+target18.width=80
 target18.x=0
 target18.y=0
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
+target19.height=50
+target19.name=BasicStatus
+target19.naviview.expanded=false
+target19.showInterface=false
+target19.type=AbstractTarget
+target19.typeParameters=
+target19.width=100
+target19.x=0
+target19.y=0
 target2.height=50
 target2.name=Background
 target2.showInterface=false
@@ -552,8 +302,6 @@ target3.width=100
 target3.x=0
 target3.y=0
 target4.height=50
-<<<<<<< HEAD
-<<<<<<< HEAD
 target4.name=Characters
 target4.naviview.expanded=false
 target4.showInterface=false
@@ -573,32 +321,6 @@ target5.x=0
 target5.y=0
 target6.height=50
 target6.name=UserInfo
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-target4.name=HealthBar
-target4.naviview.expanded=false
-target4.showInterface=false
-target4.type=ClassTarget
-target4.typeParameters=
-target4.width=80
-target4.x=0
-target4.y=0
-target5.height=50
-target5.name=Characters
-target5.naviview.expanded=false
-target5.showInterface=false
-target5.type=AbstractTarget
-target5.typeParameters=
-target5.width=90
-target5.x=0
-target5.y=0
-target6.height=50
-target6.name=City
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target6.naviview.expanded=false
 target6.showInterface=false
 target6.type=ClassTarget
@@ -607,8 +329,6 @@ target6.width=80
 target6.x=0
 target6.y=0
 target7.height=50
-<<<<<<< HEAD
-<<<<<<< HEAD
 target7.name=City
 target7.naviview.expanded=false
 target7.showInterface=false
@@ -619,39 +339,15 @@ target7.x=0
 target7.y=0
 target8.height=50
 target8.name=InfoButton
-=======
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-target7.name=InfoButton
-target7.showInterface=false
-target7.type=ClassTarget
-target7.typeParameters=
-target7.width=90
-target7.x=0
-target7.y=0
-target8.height=50
-target8.name=Controller
-<<<<<<< HEAD
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target8.naviview.expanded=false
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
-target8.width=80
+target8.width=90
 target8.x=0
 target8.y=0
 target9.height=50
-<<<<<<< HEAD
-<<<<<<< HEAD
 target9.name=Controller
-=======
-target9.name=Skill
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
-=======
-target9.name=Skill
->>>>>>> 4363ca291e3bb105fc314e686586096cace9c96a
 target9.naviview.expanded=false
 target9.showInterface=false
 target9.type=ClassTarget
