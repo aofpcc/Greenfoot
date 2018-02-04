@@ -74,7 +74,6 @@ public class City extends World
         }
         
         setPaintOrder( GameUI.class, HealthBar.class );
-        
     }
     
     public void act(){
@@ -85,13 +84,25 @@ public class City extends World
       
       // sort by 
       List<Monster> monsters = getObjects( Monster.class );
+      Collections.sort(monsters, new Comparator<Monster>(){
+          @Override
+          public int compare(Monster x, Monster y){
+            return x.getPosition().getY() - y.getPosition().getY();
+          }
+        });
+        
+      boolean bY = false;
       for( Monster m : monsters ){
         if( m.getPosition().getY() > player.getPosition().getY() ){
+          if(!bY){
+            removeObject( player );
+            addObject(player , player.getPosition().getX(), player.getPosition().getY());  
+          }
           removeObject(m);
           addObject(m, m.getPosition().getX(), m.getPosition().getY());
         }else{
-          removeObject( player );
-          addObject(player , player.getPosition().getX(), player.getPosition().getY());
+          removeObject(m);
+          addObject(m, m.getPosition().getX(), m.getPosition().getY());
         }
       }
       
