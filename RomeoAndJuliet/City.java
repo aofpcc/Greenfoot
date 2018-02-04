@@ -83,27 +83,18 @@ public class City extends World
       }
       
       // sort by 
-      List<Monster> monsters = getObjects( Monster.class );
-      Collections.sort(monsters, new Comparator<Monster>(){
+      List<BasicStatus> monsters = getObjects( BasicStatus.class );
+      Collections.sort( monsters, new Comparator<BasicStatus>(){
           @Override
-          public int compare(Monster x, Monster y){
-            return x.getPosition().getY() - y.getPosition().getY();
+          public int compare(BasicStatus a, BasicStatus b){
+            return a.getPosition().getY() - b.getPosition().getY();
           }
-        });
-        
-      boolean bY = false;
-      for( Monster m : monsters ){
-        if( m.getPosition().getY() > player.getPosition().getY() ){
-          if(!bY){
-            removeObject( player );
-            addObject(player , player.getPosition().getX(), player.getPosition().getY());  
-          }
+        } );
+      //Greenfoot.stop();BasicStatus
+      ///boolean bY = false;
+      for( BasicStatus m : monsters ){
           removeObject(m);
           addObject(m, m.getPosition().getX(), m.getPosition().getY());
-        }else{
-          removeObject(m);
-          addObject(m, m.getPosition().getX(), m.getPosition().getY());
-        }
       }
       
       /*
