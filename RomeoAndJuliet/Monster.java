@@ -1,9 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-<<<<<<< HEAD
-
-=======
 import java.util.*;
->>>>>>> 825a3a9e86673ac7a0e70897eeb84599bf21f0f5
+
 /**
  * Write a description of class Monster here.
  * 
@@ -12,9 +9,6 @@ import java.util.*;
  */
 public class Monster extends BasicStatus
 {
-<<<<<<< HEAD
-    protected Animation standDown;
-=======
     protected Animation walkingDown;
     protected Animation walkingLeft;
     protected Animation walkingUp;
@@ -28,13 +22,10 @@ public class Monster extends BasicStatus
     protected int delay;
     protected static Random random;
     protected int nextLimit;
->>>>>>> 825a3a9e86673ac7a0e70897eeb84599bf21f0f5
     
     public Monster( String name, double atk, double def, double evas, double crit, double hp){
       super(name, atk, def, evas, crit, hp);
       restore();
-<<<<<<< HEAD
-=======
       delay = 0;
       random = new Random();
       nextLimit = random.nextInt()%100 + 60;
@@ -102,7 +93,6 @@ public class Monster extends BasicStatus
       if( getDirect() == 1 ||  getDirect() == 3 )
           return nextStep() - 10 > 0 && nextStep() < 650;
       return nextStep() - 10 > 0 && nextStep() < 1150;
->>>>>>> 825a3a9e86673ac7a0e70897eeb84599bf21f0f5
     }
     
 }

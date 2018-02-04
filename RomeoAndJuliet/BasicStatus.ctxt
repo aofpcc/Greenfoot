@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BasicStatus
-comment0.text=\n\ Write\ a\ description\ of\ class\ BasicStatus\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ BasicStatus\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=name\ strength\ agility\ intelligent\ typeObj
 comment1.target=BasicStatus(java.lang.String,\ int,\ int,\ int,\ BasicStatus.TYPE)
 comment10.params=
@@ -82,13 +82,6 @@ comment44.target=void\ attack()
 comment45.params=dmg
 comment45.target=void\ getDamage(double)
 comment46.params=
-<<<<<<< HEAD
-comment46.target=boolean\ isDead()
-comment47.params=
-comment47.target=double\ getAtk()
-comment48.params=
-comment48.target=java.lang.String\ getName()
-=======
 comment46.target=void\ die()
 comment47.params=
 comment47.target=boolean\ isDead()
@@ -96,7 +89,6 @@ comment48.params=
 comment48.target=double\ getAtk()
 comment49.params=
 comment49.target=java.lang.String\ getName()
->>>>>>> 825a3a9e86673ac7a0e70897eeb84599bf21f0f5
 comment5.params=strength
 comment5.target=void\ setStrength(int)
 comment6.params=agility
@@ -107,8 +99,4 @@ comment8.params=currentHp
 comment8.target=void\ setCurrentHp(double)
 comment9.params=
 comment9.target=int\ getStrength()
-<<<<<<< HEAD
-numComments=49
-=======
 numComments=50
->>>>>>> 825a3a9e86673ac7a0e70897eeb84599bf21f0f5
