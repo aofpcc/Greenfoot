@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class BasicStatus here.
  * 
@@ -66,7 +66,6 @@ public abstract class BasicStatus extends Actor{
     this.intelligent = intelligent;
     this.typeObj     = typeObj;
     this.name        = name;
-    this.position    = position;
   }
   
   public BasicStatus( String name, double atk, double def, double evas, double crit, double hp){
@@ -330,4 +329,14 @@ public abstract class BasicStatus extends Actor{
   public boolean isDead(){
     return isDead;  
   }
+  
+  // All stat
+  public double getAtk(){
+    return atk;
+  }
+  
+  public String getName(){
+    return name;  
+  }
+  
 }

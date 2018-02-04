@@ -24,12 +24,11 @@ public class InfoButton extends GameUI
     
     public void act()
     {
-        
         if( !isNormal ){
             time--;
             if(time == 0) isNormal = true;
         }
-        else if( Greenfoot.mousePressed(this) ){
+        else if( Greenfoot.getMouseInfo()!=null &&Greenfoot.mousePressed(this) ){
             setImage(animClick);
             isNormal = false;
             time = 10;
