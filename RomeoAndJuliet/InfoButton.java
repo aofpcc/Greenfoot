@@ -37,5 +37,6 @@ public class InfoButton extends GameUI
         {
             setImage(animNormal);
         }
+        
     }    
 }

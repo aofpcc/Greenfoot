@@ -13,6 +13,10 @@ public class Skeleton extends Monster
       super("Skeleton", 2,   1,   1,   1,   50);
       setSize(size);
       setPosition(position);
+<<<<<<< HEAD
+      standDown = new Animation( "Monsters/Skeleton/standDown/down", 1, size.getX(), size.getY() );
+      setSpeed(3);
+=======
       
       walkingDown = new Animation( "Monsters/Skeleton/walkingDown/down", 8, size.getX(), size.getY() );
       walkingLeft = new Animation( "Monsters/Skeleton/walkingLeft/left", 8, size.getX(), size.getY() );
@@ -26,6 +30,7 @@ public class Skeleton extends Monster
       
       setSpeed(1);
       maxDelay = 3;
+>>>>>>> 825a3a9e86673ac7a0e70897eeb84599bf21f0f5
       setAnimation(standDown);
       setImage(standDown.getFrame());
       die = new Animation( "Monsters/Skeleton/die/die", 6, size.getX(), size.getY() );
