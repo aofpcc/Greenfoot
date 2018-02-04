@@ -26,6 +26,7 @@ public abstract class BasicStatus extends Actor{
   private int speed;
   private boolean isMoving = false;
   private int animDelay = 1;
+  protected int maxDelay;
   
   // Basic of all status
   private int strength;
@@ -204,6 +205,27 @@ public abstract class BasicStatus extends Actor{
             setLocation( position.getX(), position.getY() );
             break;
         }
+  }
+  
+  public void walk(int steps){
+        switch( direction ){
+          case 1:
+            position = new Vector2(position.getX() , position.getY() + speed*steps);
+            setLocation( position.getX(), position.getY() );
+            break;
+          case 2:
+            position = new Vector2(position.getX() - speed*steps, position.getY());
+            setLocation( position.getX(), position.getY() );
+            break;
+          case 3:
+            position = new Vector2(position.getX() , position.getY() -  speed*steps);
+            setLocation( position.getX(), position.getY() );
+            break;
+          case 4:
+            position = new Vector2(position.getX() + speed*steps, position.getY());
+            setLocation( position.getX(), position.getY() );
+            break;
+        }
     
   }
   
@@ -223,7 +245,7 @@ public abstract class BasicStatus extends Actor{
             getWorld().removeObject(this);
          }
     }
-    else if( animDelay++ >= speed -1 ){
+    else if( animDelay++ >= maxDelay  ){
         if( skillFrame > 0 ){
             skillFrame--;
         }
