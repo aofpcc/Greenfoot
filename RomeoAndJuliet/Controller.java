@@ -72,6 +72,15 @@ public class Controller extends Actor
          case 4: player.setAnimation(player.getStandRight()); break;
        }
     }
+    
+    //Open info with button
+    if(Greenfoot.isKeyDown("E"))
+    {
+        
+    }
+    
+    //Mouse on the button
+    
     }
     public boolean canMove(){
         if( player.getDirect() == 1 ||  player.getDirect() == 3 )

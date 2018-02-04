@@ -233,7 +233,7 @@ public abstract class BasicStatus extends Actor{
         animDelay = 0;
         
         //Test
-        getDamage( 0.1 );
+        //getDamage( 0.1 );
     }
     if( currentHp > 0 ){
         hpBar.action();

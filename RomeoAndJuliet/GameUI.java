@@ -10,6 +10,9 @@ public class GameUI extends Actor
     private Vector2 position;
     protected GreenfootImage animNormal;
     protected GreenfootImage animClick;
+    public GameUI()
+    {
+    }
 
     public GameUI(Vector2 position)
     {
