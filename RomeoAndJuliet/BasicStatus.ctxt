@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BasicStatus
-comment0.text=\n\ Write\ a\ description\ of\ class\ BasicStatus\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ BasicStatus\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=name\ strength\ agility\ intelligent\ typeObj
 comment1.target=BasicStatus(java.lang.String,\ int,\ int,\ int,\ BasicStatus.TYPE)
 comment10.params=

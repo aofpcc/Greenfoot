@@ -60,6 +60,9 @@ public class City extends World
         
         controller = new Controller(player);
         addObject(controller, -100, -100);
+        
+        //UI 
+        addObject(new InfoButton(), width-30, 30); 
     }
     
     public void act(){
