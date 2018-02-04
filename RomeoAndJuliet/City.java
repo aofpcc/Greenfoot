@@ -66,8 +66,8 @@ public class City extends World
         //UI 
         addObject(new InfoButton(), width-30, 30); 
         
-        for(int i = 0; i < 10; ++i){
-            Skeleton test = new Skeleton( new Vector2(350 + i*30, 350 + i*30), new Vector2( 75, 80 ) );
+        for(int i = 0; i < 15; ++i){
+            Skeleton test = new Skeleton( new Vector2(100 + i*30, 100 + i*30), new Vector2( 75, 80 ) );
             test.setHpBar( new HealthBar(test) );
             addObject(test, test.getPosition().getX(), test.getPosition().getY());
             addObject( test.getHpBar(), test.getPosition().getX(), test.getPosition().getY()-(test.getSize().getY()/2) );
@@ -187,6 +187,7 @@ public class City extends World
       }
       List<Monster> monsters = getObjects(Monster.class);
       for( Monster m : monsters ){
+        if( m == null ) continue;
         switch( d ){
             case 1:
                 changeX = 0;

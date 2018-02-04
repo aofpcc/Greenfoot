@@ -34,10 +34,13 @@ public class Monster extends BasicStatus
     @Override
     public void act(){
       super.act();
-      List<Characters> playerSet = getObjectsInRange( 100, Characters.class);
+      List<Characters> playerSet = null;
+      if( !isDead() ){
+          playerSet = getObjectsInRange( 100, Characters.class);
+      }
       if( getSkillFrame() > 0 || isDead()){
         
-      }else if( playerSet.size() > 0  ){
+      }else if( playerSet != null && playerSet.size() > 0  ){
         int x = playerSet.get(0).getPosition().getX() - getPosition().getX(); // neg => right, pos => left
         int y = playerSet.get(0).getPosition().getY() - getPosition().getY(); // neg => up , pos => down
         int dir = 1;
